@@ -15,7 +15,7 @@ class Estudiante(models.Model):
     identificacion=models.CharField(max_length=10)
     edad=models.IntegerField()
     afinidad=models.ForeignKey(Afinidad, on_delete=models.CASCADE)
-    grimorio=models.ForeignKey(Grimorio, on_delete=models.CASCADE)
+    grimorio=models.ForeignKey(Grimorio, on_delete=models.CASCADE, blank=True, null=True)
 
 class Estatus(models.Model):
     nombre=models.CharField(max_length=20)
