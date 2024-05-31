@@ -1,9 +1,12 @@
 {
     "builds": [
         {
-        "src": "GestionAcademia/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
+            "src": "GestionAcademia/wsgi.py",
+            "use": "@ardnt/vercel-python-wsgi",
+            "config": {
+                "runtime": "python3.10",
+                "maxLambdaSize": "15mb" 
+            }
         },
         {
             "src": "build_files.sh",
