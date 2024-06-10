@@ -29,18 +29,26 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'GestionAcademia',
-    'rest_framework',
-    'drf_yasg',
+    'django.contrib.staticfiles'
 ]
+
+LIBS_APPS = [    
+    'rest_framework',
+    'drf_yasg'
+]
+
+MY_APPS = [
+    'GestionAcademia'
+]
+
+
+INSTALLED_APPS = DJANGO_APPS + LIBS_APPS + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
